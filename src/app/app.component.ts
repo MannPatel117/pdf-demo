@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pdf-view';
+  src:string='https://devapi.technoforce.in/Dropbox/PDF_PO_Imported/TFS-PO-23-0154-R02.pdf';
 }
