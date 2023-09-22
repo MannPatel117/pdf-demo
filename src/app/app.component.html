@@ -1,4 +1,15 @@
-<pdf-viewer
+<div class="container">
+  <div class="header">
+      <button  type="button">
+          <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15 12H1M1 12L8 19M1 12L8 5" stroke="black" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+          </svg>
+      </button>
+  </div>
+
+ <div class="contain-pdf">
+  <pdf-viewer *ngIf="src != ''"
   [src]="src"
   [rotation]="0"
   [original-size]="false"
@@ -13,3 +24,8 @@
   [show-borders]="false"
   class="pdf-viewer"
 ></pdf-viewer>
+ </div>
+  <div class="error flex" *ngIf="src == ''">
+      <p>No PDF found</p>
+  </div>
+</div>
